@@ -40,39 +40,45 @@ body {
 }
 
 .logo {
-  width: 180px;
+  width: 260px;
 
-  opacity: 0.15;
+  opacity: 0.12;
 
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 h1 {
   font-family: "Newsreader", serif;
 
-  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-size: clamp(4rem, 8vw, 6.5rem);
 
   font-weight: 200;
 
-  line-height: 1;
+  line-height: 0.95;
 
   letter-spacing: -0.03em;
 
   color: #3a403d;
 
   margin-bottom: 2rem;
+
+  animation: fadeUp 1.2s ease;
 }
 
-.hero p {
+.hero-text {
+  max-width: 620px;
+
   font-family: "Newsreader", serif;
 
-  font-size: 1.4rem;
+  font-size: 1.45rem;
 
   line-height: 1.8;
 
   color: rgba(58, 64, 61, 0.75);
 
-  max-width: 600px;
+  margin-bottom: 3rem;
+
+  animation: fadeUp 1.4s ease;
 }
 
 /* ==========================
@@ -85,226 +91,80 @@ h1 {
   align-items: center;
   justify-content: center;
 
-  padding: 1rem 2rem;
+  padding: 1rem 2.2rem;
 
   border-radius: 999px;
 
-  border: 1px solid rgba(127, 154, 137, 0.5);
-
-  background: transparent;
+  text-decoration: none;
 
   color: var(--text);
 
-  text-decoration: none;
+  border: 1px solid rgba(127, 154, 137, 0.4);
 
-  cursor: pointer;
+  transition: all 0.35s ease;
 
-  transition: all 0.3s ease;
+  animation: fadeUp 1.6s ease;
 }
 
 .cta:hover {
   background: var(--salvia);
 
+  color: white;
+
   border-color: var(--salvia);
 
-  color: white;
+  transform: translateY(-2px);
 }
 
-/* ==========================
-   COME FUNZIONA
-========================== */
+.hero-note {
+  margin-top: 2rem;
 
-.steps {
-  max-width: 1200px;
+  font-size: 0.95rem;
 
-  margin: 0 auto;
+  letter-spacing: 0.03em;
 
-  padding: 6rem 2rem;
+  color: rgba(58, 64, 61, 0.55);
 
-  text-align: center;
+  animation: fadeUp 1.8s ease;
 }
+.doctor-name {
+  font-family: "Inter", sans-serif;
 
-.steps h2 {
-  font-family: "Newsreader", serif;
+  font-size: 0.95rem;
 
-  font-size: clamp(3rem, 6vw, 4.5rem);
+  letter-spacing: 0.18em;
 
-  font-weight: 200;
+  text-transform: uppercase;
 
-  color: #3a403d;
+  color: rgba(58, 64, 61, 0.55);
 
-  margin-bottom: 5rem;
-}
-
-.steps-grid {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 3rem;
-}
-
-.step span {
-  display: block;
-
-  font-size: 0.9rem;
-
-  letter-spacing: 0.2em;
-
-  color: rgba(58, 64, 61, 0.4);
-
-  margin-bottom: 1rem;
-}
-
-.step h3 {
-  font-family: "Newsreader", serif;
-
-  font-size: 2.4rem;
-
-  font-weight: 300;
-
-  color: #3a403d;
-
-  margin-bottom: 1rem;
-}
-
-.step p {
-  line-height: 1.8;
-
-  color: rgba(58, 64, 61, 0.7);
-}
-/* ==========================
-   BOOKING CARD
-========================== */
-
-.request-section {
-  max-width: 900px;
-
-  margin: 0 auto;
-
-  padding: 8rem 2rem 10rem;
-}
-
-.booking-card {
-  max-width: 700px;
-
-  margin: 0 auto;
-
-  padding: 4rem;
-
-  background: rgba(255, 255, 255, 0.45);
-
-  border: 1px solid rgba(127, 154, 137, 0.15);
-
-  border-radius: 32px;
-
-  backdrop-filter: blur(8px);
-
-  text-align: center;
-}
-
-.request-title {
-  font-family: "Newsreader", serif;
-
-  font-size: clamp(3rem, 6vw, 4.5rem);
-
-  font-weight: 200;
-
-  color: #3a403d;
-
-  margin-bottom: 1.5rem;
-}
-
-.request-text {
-  max-width: 500px;
-
-  margin: 0 auto 3rem;
-
-  line-height: 1.9;
-
-  color: rgba(58, 64, 61, 0.75);
+  margin-bottom: 2rem;
 }
 
 /* ==========================
    ANIMAZIONI
 ========================== */
 
-#introContent {
-  transition: all 0.5s ease;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-#formContent {
-  transition: all 0.8s ease;
-}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
 
-.hidden {
-  display: none;
-}
-
-/* ==========================
-   FORM
-========================== */
-
-.booking-form {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 1.2rem;
-}
-
-.booking-form input,
-.booking-form select,
-.booking-form textarea {
-  width: 100%;
-
-  padding: 1.2rem 1.5rem;
-
-  border: 1px solid rgba(127, 154, 137, 0.25);
-
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.55);
-
-  font-family: "Inter", sans-serif;
-
-  font-size: 1rem;
-
-  color: #2f3431;
-
-  outline: none;
-
-  transition: 0.3s ease;
-}
-
-.booking-form input:focus,
-.booking-form select:focus,
-.booking-form textarea:focus {
-  border-color: var(--salvia);
-
-  box-shadow: 0 0 0 4px rgba(127, 154, 137, 0.12);
-}
-
-.booking-form textarea {
-  resize: vertical;
-
-  min-height: 120px;
-}
-
-.booking-form .cta {
-  margin: 1rem auto 0;
-}
-
-.privacy-note {
-  max-width: 550px;
-
-  margin: 2rem auto 0;
-
-  font-size: 0.9rem;
-
-  line-height: 1.7;
-
-  color: rgba(58, 64, 61, 0.55);
+  to {
+    opacity: 0.12;
+  }
 }
 
 /* ==========================
@@ -312,37 +172,20 @@ h1 {
 ========================== */
 
 @media (max-width: 768px) {
+
   .logo {
-    width: 120px;
+    width: 130px;
   }
 
   h1 {
-    font-size: clamp(2.8rem, 14vw, 4rem);
+    font-size: clamp(3rem, 14vw, 4.5rem);
   }
 
-  .hero p {
-    font-size: 1.15rem;
+  .hero-text {
+    font-size: 1.2rem;
   }
 
-  .steps-grid {
-    grid-template-columns: 1fr;
-
-    gap: 4rem;
-  }
-
-  .request-section {
-    padding: 6rem 1.5rem 8rem;
-  }
-
-  .booking-card {
-    padding: 2rem;
-  }
-
-  .request-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
-  }
-
-  .request-text {
-    font-size: 1rem;
+  .hero-note {
+    font-size: 0.9rem;
   }
 }
