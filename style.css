@@ -1,0 +1,348 @@
+:root {
+  --bg: #f7f4ee;
+  --salvia: #7f9a89;
+  --salvia-dark: #687d70;
+  --text: #2f3431;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 2rem;
+}
+
+.logo {
+  width: 180px;
+
+  opacity: 0.15;
+
+  margin-bottom: 3rem;
+}
+
+h1 {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3.5rem, 8vw, 6rem);
+
+  font-weight: 200;
+
+  line-height: 1;
+
+  letter-spacing: -0.03em;
+
+  color: #3a403d;
+
+  margin-bottom: 2rem;
+}
+
+.hero p {
+  font-family: "Newsreader", serif;
+
+  font-size: 1.4rem;
+
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.75);
+
+  max-width: 600px;
+}
+
+/* ==========================
+   CTA
+========================== */
+
+.cta {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(127, 154, 137, 0.5);
+
+  background: transparent;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--salvia);
+
+  border-color: var(--salvia);
+
+  color: white;
+}
+
+/* ==========================
+   COME FUNZIONA
+========================== */
+
+.steps {
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 6rem 2rem;
+
+  text-align: center;
+}
+
+.steps h2 {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3rem, 6vw, 4.5rem);
+
+  font-weight: 200;
+
+  color: #3a403d;
+
+  margin-bottom: 5rem;
+}
+
+.steps-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 3rem;
+}
+
+.step span {
+  display: block;
+
+  font-size: 0.9rem;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(58, 64, 61, 0.4);
+
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-family: "Newsreader", serif;
+
+  font-size: 2.4rem;
+
+  font-weight: 300;
+
+  color: #3a403d;
+
+  margin-bottom: 1rem;
+}
+
+.step p {
+  line-height: 1.8;
+
+  color: rgba(58, 64, 61, 0.7);
+}
+/* ==========================
+   BOOKING CARD
+========================== */
+
+.request-section {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  padding: 8rem 2rem 10rem;
+}
+
+.booking-card {
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding: 4rem;
+
+  background: rgba(255, 255, 255, 0.45);
+
+  border: 1px solid rgba(127, 154, 137, 0.15);
+
+  border-radius: 32px;
+
+  backdrop-filter: blur(8px);
+
+  text-align: center;
+}
+
+.request-title {
+  font-family: "Newsreader", serif;
+
+  font-size: clamp(3rem, 6vw, 4.5rem);
+
+  font-weight: 200;
+
+  color: #3a403d;
+
+  margin-bottom: 1.5rem;
+}
+
+.request-text {
+  max-width: 500px;
+
+  margin: 0 auto 3rem;
+
+  line-height: 1.9;
+
+  color: rgba(58, 64, 61, 0.75);
+}
+
+/* ==========================
+   ANIMAZIONI
+========================== */
+
+#introContent {
+  transition: all 0.5s ease;
+}
+
+#formContent {
+  transition: all 0.8s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ==========================
+   FORM
+========================== */
+
+.booking-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 1.2rem;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+
+  padding: 1.2rem 1.5rem;
+
+  border: 1px solid rgba(127, 154, 137, 0.25);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  font-family: "Inter", sans-serif;
+
+  font-size: 1rem;
+
+  color: #2f3431;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  border-color: var(--salvia);
+
+  box-shadow: 0 0 0 4px rgba(127, 154, 137, 0.12);
+}
+
+.booking-form textarea {
+  resize: vertical;
+
+  min-height: 120px;
+}
+
+.booking-form .cta {
+  margin: 1rem auto 0;
+}
+
+.privacy-note {
+  max-width: 550px;
+
+  margin: 2rem auto 0;
+
+  font-size: 0.9rem;
+
+  line-height: 1.7;
+
+  color: rgba(58, 64, 61, 0.55);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 768px) {
+  .logo {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 14vw, 4rem);
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+
+    gap: 4rem;
+  }
+
+  .request-section {
+    padding: 6rem 1.5rem 8rem;
+  }
+
+  .booking-card {
+    padding: 2rem;
+  }
+
+  .request-title {
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
+  }
+
+  .request-text {
+    font-size: 1rem;
+  }
+}
